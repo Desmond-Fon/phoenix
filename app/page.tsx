@@ -6,238 +6,232 @@ import { useState } from "react";
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="relative w-full overflow-hidden bg-black">
-      {/* Header */}
-      <header className="relative z-10 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/logo.svg"
-            alt="Phoenix Protocol"
-            width={173}
-            height={34}
-            priority
-          />
-        </div>
-        <nav className="hidden items-center gap-8 md:flex">
-          <a
-            href="#home"
-            className="font-sans text-white transition-opacity hover:opacity-80"
-            style={{ fontFamily: "Satoshi, sans-serif" }}
-          >
-            Home
-          </a>
-          <a
-            href="#story"
-            className="font-sans text-white transition-opacity hover:opacity-80"
-            style={{ fontFamily: "Satoshi, sans-serif" }}
-          >
-            The Story
-          </a>
-          <a
-            href="#community"
-            className="font-sans text-white transition-opacity hover:opacity-80"
-            style={{ fontFamily: "Satoshi, sans-serif" }}
-          >
-            Community
-          </a>
-          <a
-            href="#future"
-            className="font-sans text-white transition-opacity hover:opacity-80"
-            style={{ fontFamily: "Satoshi, sans-serif" }}
-          >
-            The Future
-          </a>
-        </nav>
-        <button
-          className="hidden md:block rounded-lg font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
-          style={{ fontFamily: "Satoshi, sans-serif" }}
-        >
-          Buy $PHX
-        </button>
-
-        <button
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+    <div className="relative w-full overflow-hidden bg-[#000510]">
+      <img src="/headPattern.svg" className="absolute " alt="" />
+      <div>
+        {/* Header */}
+        <header className="relative z-10 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.svg"
+              alt="Phoenix Protocol"
+              width={173}
+              height={34}
+              priority
+            />
+          </div>
+          <nav className="hidden items-center gap-8 md:flex">
+            <a
+              href="#home"
+              className="font-sans text-white transition-opacity hover:opacity-80"
+              style={{ fontFamily: "Satoshi, sans-serif" }}
             >
-              <path
-                d="M18 6L6 18M6 6L18 18"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          ) : (
-            <img src="/hamburger.svg" alt="Menu" />
-          )}
-        </button>
-      </header>
-
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/80"
-            onClick={() => setIsMenuOpen(false)}
-          />
-
-          {/* Menu Panel */}
-          <div className="relative z-10 px-6 pt-4">
-            <div className="relative w-full bg-[#000510FC] rounded-2xl p-10 space-y-8">
-              {/* Close Button */}
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-6 right-6 text-white hover:opacity-80 transition-opacity"
-                aria-label="Close menu"
+              Home
+            </a>
+            <a
+              href="#story"
+              className="font-sans text-white transition-opacity hover:opacity-80"
+              style={{ fontFamily: "Satoshi, sans-serif" }}
+            >
+              The Story
+            </a>
+            <a
+              href="#community"
+              className="font-sans text-white transition-opacity hover:opacity-80"
+              style={{ fontFamily: "Satoshi, sans-serif" }}
+            >
+              Community
+            </a>
+            <a
+              href="#future"
+              className="font-sans text-white transition-opacity hover:opacity-80"
+              style={{ fontFamily: "Satoshi, sans-serif" }}
+            >
+              The Future
+            </a>
+          </nav>
+          <button
+            className="hidden md:block rounded-lg font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
+            style={{ fontFamily: "Satoshi, sans-serif" }}
+          >
+            Buy $PHX
+          </button>
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 6L6 18M6 6L18 18"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-
-              {/* Navigation Items */}
-              <nav className="flex flex-col items-start space-y-8">
-                <a
-                  href="#home"
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            ) : (
+              <img src="/hamburger.svg" alt="Menu" />
+            )}
+          </button>
+        </header>
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-50 md:hidden">
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-black/80"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            {/* Menu Panel */}
+            <div className="relative z-10 px-6 pt-4">
+              <div className="relative w-full bg-[#000510FC] rounded-2xl p-10 space-y-8">
+                {/* Close Button */}
+                <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
-                  style={{ fontFamily: "Satoshi, sans-serif" }}
+                  className="absolute top-6 right-6 text-white hover:opacity-80 transition-opacity"
+                  aria-label="Close menu"
                 >
-                  Home
-                </a>
-                <a
-                  href="#story"
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 6L6 18M6 6L18 18"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                {/* Navigation Items */}
+                <nav className="flex flex-col items-start space-y-8">
+                  <a
+                    href="#home"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
+                    style={{ fontFamily: "Satoshi, sans-serif" }}
+                  >
+                    Home
+                  </a>
+                  <a
+                    href="#story"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
+                    style={{ fontFamily: "Satoshi, sans-serif" }}
+                  >
+                    The Story
+                  </a>
+                  <a
+                    href="#community"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="relative font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
+                    style={{ fontFamily: "Satoshi, sans-serif" }}
+                  >
+                    The Community
+                  </a>
+                  <a
+                    href="#future"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
+                    style={{ fontFamily: "Satoshi, sans-serif" }}
+                  >
+                    The Future
+                  </a>
+                </nav>
+                {/* Buy Button */}
+                <button
+                  className="w-full rounded-lg font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-3.5 text-white transition-opacity hover:opacity-90 shadow-lg shadow-[#1558FF]/30"
+                  style={{ fontFamily: "Satoshi, sans-serif" }}
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
-                  style={{ fontFamily: "Satoshi, sans-serif" }}
                 >
-                  The Story
-                </a>
-                <a
-                  href="#community"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="relative font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
-                  style={{ fontFamily: "Satoshi, sans-serif" }}
-                >
-                  The Community
-                </a>
-                <a
-                  href="#future"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-sans text-white text-center text-2xl transition-opacity hover:opacity-80"
-                  style={{ fontFamily: "Satoshi, sans-serif" }}
-                >
-                  The Future
-                </a>
-              </nav>
-
-              {/* Buy Button */}
-              <button
-                className="w-full rounded-lg font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-3.5 text-white transition-opacity hover:opacity-90 shadow-lg shadow-[#1558FF]/30"
-                style={{ fontFamily: "Satoshi, sans-serif" }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Buy $PHX
-              </button>
+                  Buy $PHX
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="relative z-10  px-10 h-[95vh] lg:min-h-screen pb-20"
-      >
-        <img
-          className="hidden lg:block absolute top-0 left-0 w-full h-full z-0"
-          alt="Hero Background"
-          src="/hero.svg"
-        />
-        <img
-          className="lg:hidden absolute bottom-0 left-0 z-0"
-          alt="Hero Background"
-          src="/heroMob.png"
-        />
-        {/* Main Headline */}
-        <h1
-          className="mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-normal leading-tight text-transparent lg:text-7xl xl:text-[105px]"
-          style={{
-            fontFamily: '"Editor\'s Note", serif',
-            textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
-          }}
+        )}
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="relative z-10  px-10 h-[95vh] lg:min-h-screen pb-20"
         >
-          Turning Market Fear Into Fuel
-        </h1>
-
-        {/* Content Grid */}
-        <div className="mx-auto container lg:px-o relative flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8">
-          {/* Left Text Block */}
-          <div className=" w-full text-left lg:col-span-1">
-            <p
-              className="mt-[20px] lg:mt-0 mb-5 lg:mb-[38px] text-base lg:text-[26px] font-medium leading-[26px] lg:leading-[38px] text-white"
-              style={{ fontFamily: "Satoshi, sans-serif" }}
-            >
-              The market burns, Phoenix rebuilds, Turning fear into fuel.
-            </p>
-            <p
-              className="text-base lg:text-[26px] font-medium leading-[26px] lg:leading-[38px] text-white"
-              style={{ fontFamily: "Satoshi, sans-serif" }}
-            >
-              The fear that <br className="hidden lg:block" /> weakens others{" "}
-              <br className="hidden lg:block" /> becomes the
-              <br className="hidden lg:block" /> energy that makes{" "}
-              <br className="hidden lg:block" /> Phoenix stronger.
-            </p>
+          <img
+            className="hidden lg:block absolute top-0 left-0 w-full h-full z-0"
+            alt="Hero Background"
+            src="/hero.svg"
+          />
+          <img
+            className="lg:hidden absolute bottom-0 left-0 z-0"
+            alt="Hero Background"
+            src="/heroMob.png"
+          />
+          {/* Main Headline */}
+          <h1
+            className="mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-normal leading-tight text-transparent lg:text-7xl xl:text-[105px]"
+            style={{
+              fontFamily: '"Editor\'s Note", serif',
+              textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
+            }}
+          >
+            Turning Market Fear Into Fuel
+          </h1>
+          {/* Content Grid */}
+          <div className="mx-auto container lg:px-o relative flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8">
+            {/* Left Text Block */}
+            <div className=" w-full text-left lg:col-span-1">
+              <p
+                className="mt-[20px] lg:mt-0 mb-5 lg:mb-[38px] text-base lg:text-[26px] font-medium leading-[26px] lg:leading-[38px] text-white"
+                style={{ fontFamily: "Satoshi, sans-serif" }}
+              >
+                The market burns, Phoenix rebuilds, Turning fear into fuel.
+              </p>
+              <p
+                className="text-base lg:text-[26px] font-medium leading-[26px] lg:leading-[38px] text-white"
+                style={{ fontFamily: "Satoshi, sans-serif" }}
+              >
+                The fear that <br className="hidden lg:block" /> weakens others{" "}
+                <br className="hidden lg:block" /> becomes the
+                <br className="hidden lg:block" /> energy that makes{" "}
+                <br className="hidden lg:block" /> Phoenix stronger.
+              </p>
+            </div>
+            <div />
+            {/* Right Text Block */}
+            <div className="w-ful  hidden lg:block text-right lg:col-span-1">
+              <p
+                className="text-lg lg:text-[26px] font-medium leading-[38px] text-white"
+                style={{ fontFamily: "Satoshi, sans-serif" }}
+              >
+                Every sell, every
+                <br className="hidden lg:block" /> drop in confidence
+                <br className="hidden lg:block" /> fuels a regenerative
+                <br className="hidden lg:block" /> cycle that rewards
+                <br className="hidden lg:block" /> holders and rebuilds
+                <br className="hidden lg:block" /> the system from{" "}
+                <br className="hidden lg:block" />
+                within.
+              </p>
+            </div>
           </div>
-          <div />
-
-          {/* Right Text Block */}
-          <div className="w-ful  hidden lg:block text-right lg:col-span-1">
-            <p
-              className="text-lg lg:text-[26px] font-medium leading-[38px] text-white"
-              style={{ fontFamily: "Satoshi, sans-serif" }}
-            >
-              Every sell, every
-              <br className="hidden lg:block" /> drop in confidence
-              <br className="hidden lg:block" /> fuels a regenerative
-              <br className="hidden lg:block" /> cycle that rewards
-              <br className="hidden lg:block" /> holders and rebuilds
-              <br className="hidden lg:block" /> the system from{" "}
-              <br className="hidden lg:block" />
-              within.
-            </p>
-          </div>
-        </div>
-
-        <button
-          className="rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
-          style={{ fontFamily: "Satoshi, sans-serif" }}
-        >
-          Buy $PHX
-        </button>
-      </section>
+          <button
+            className="rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
+            style={{ fontFamily: "Satoshi, sans-serif" }}
+          >
+            Buy $PHX
+          </button>
+        </section>
+      </div>
 
       {/* The Story Section */}
       <section
