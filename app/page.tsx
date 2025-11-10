@@ -168,7 +168,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative z-10  px-10 h-[85vh] lg:min-h-screen pb-20"
+        className="relative z-10  px-10 h-[95vh] lg:min-h-screen pb-20"
       >
         <img
           className="hidden lg:block absolute top-0 left-0 w-full h-full z-0"
@@ -358,14 +358,14 @@ export default function Home() {
           {/* Central Collage */}
           <div className="relative flex lg:min-h-[300px] lg:-mt-16 items-center justify-center">
             <Image
-              src="/marketBg.png"
+              src="/marketBg.svg"
               alt="Market Background"
               width={1000}
               height={1000}
               className="hidden lg:block h-full w-full object-contain"
             />
             <img
-              src="/marketBgMob.png"
+              src="/marketBgMob.svg"
               alt="Market Background"
               width={1000}
               height={1000}
@@ -415,7 +415,7 @@ export default function Home() {
       >
         <div className="relative z-10 mx-auto container px-8">
           <div
-            className="flex flex-col items-center justify-between gap-[60px] rounded-3xl bg-linear-to-r from-[#145FE3] to-[#7BE3FA] p-12 lg:flex-row lg:gap-12 lg:py-[120px] lg:px-[158px] "
+            className="relative flex flex-col items-center justify-between gap-[60px] rounded-3xl bg-linear-to-r from-[#145FE3] to-[#7BE3FA] p-12 lg:flex-row lg:gap-12 lg:py-[120px] lg:px-[158px] overflow-hidden"
             // style={{
             //   backgroundImage: "url('/joinBg.svg')",
             // }}
@@ -424,9 +424,9 @@ export default function Home() {
             <img
               src="/joinBg.svg"
               alt="Phoenix Protocol Logo"
-              className="absolute top-0 lg:-left-[400px] w-full h-full z-0"
+              className="absolute top-0 left-0 lg:-left-[400px] w-full h-full z-0 object-cover"
             />
-            <div className="flex flex-1 items-center gap-6">
+            <div className="flex flex-1 items-center gap-6 relative z-10">
               <div className="shrink-0">
                 <h1
                   className="text-[62px] text-center lg:text-left font-normal leading-[57px] lg:leading-tight lg:text-[100px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text text-transparent"
@@ -444,13 +444,13 @@ export default function Home() {
                 <img
                   src="/revolution.svg"
                   alt="Phoenix Protocol Logo"
-                  className="h-[65px] w-[65px] absolute top-[19%] lg:top-[30%] left-[68%] lg:left-[33%] lg:h-32 lg:w-32"
+                  className="h-[65px] w-[65px] absolute top-[14%] lg:top-[30%] left-[76%] lg:left-[33%] lg:h-32 lg:w-32"
                 />
               </div>
             </div>
 
             {/* Right Side - Social Buttons */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 relative z-10">
               <a href="#" aria-label="X (Twitter)">
                 <img src="/x.svg" alt="X" />
               </a>
