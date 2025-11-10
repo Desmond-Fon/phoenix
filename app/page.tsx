@@ -7,7 +7,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="relative w-full overflow-hidden bg-[#000510]">
-      <img src="/headPattern.svg" className="absolute " alt="" />
+      <img src="/headPattern.svg" className="absolute w-full object-contain" alt="" />
       <div>
         {/* Header */}
         <header className="relative z-10 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
