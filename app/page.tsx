@@ -17,28 +17,28 @@ export default function Home() {
         </div>
         <nav className="hidden items-center gap-8 md:flex">
           <a
-            href="#"
+            href="#home"
             className="font-sans text-white transition-opacity hover:opacity-80"
             style={{ fontFamily: "Satoshi, sans-serif" }}
           >
             Home
           </a>
           <a
-            href="#"
+            href="#story"
             className="font-sans text-white transition-opacity hover:opacity-80"
             style={{ fontFamily: "Satoshi, sans-serif" }}
           >
             The Story
           </a>
           <a
-            href="#"
+            href="#community"
             className="font-sans text-white transition-opacity hover:opacity-80"
             style={{ fontFamily: "Satoshi, sans-serif" }}
           >
             Community
           </a>
           <a
-            href="#"
+            href="#future"
             className="font-sans text-white transition-opacity hover:opacity-80"
             style={{ fontFamily: "Satoshi, sans-serif" }}
           >
@@ -55,6 +55,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
+        id="home"
         className="relative z-10  min-h-screen pb-20"
         // style={{
         //   backgroundImage: "url('/hero.svg')",
@@ -99,7 +100,7 @@ export default function Home() {
           <div />
 
           {/* Right Text Block */}
-          <div className="w-full text-right lg:col-span-1">
+          <div className="w-ful text-right lg:col-span-1">
             <p
               className="text-lg lg:text-[26px] font-medium leading-[38px] text-white"
               style={{ fontFamily: "Satoshi, sans-serif" }}
@@ -119,6 +120,7 @@ export default function Home() {
 
       {/* The Story Section */}
       <section
+        id="story"
         className="relative min-h-[120vh] w-full px-16 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/bg.png')",
@@ -129,7 +131,7 @@ export default function Home() {
           alt="Story Background"
           className="absolute bottom-0 left-0 w-full h-full z-0"
         />
-        <div className="relative z-10 px-8 py-20 lg:px-[170px] lg:py-32">
+        <div className="container mx-auto relative z-10 px-8 py-20 lg:px-[170px] lg:py-32">
           {/* Title Box */}
           <div className="mb-12 inline-block border bg-[#01164580] px-6 py-3 lg:px-20 lg:py-6">
             <h2
@@ -188,10 +190,13 @@ export default function Home() {
       </section>
 
       {/* Market Section */}
-      <section className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat">
+      <section
+        id="future"
+        className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+      >
         <div className="relative z-10 flex min-h-screen flex-col justify-between pt-20 lg:pt-32">
           {/* Top Section */}
-          <div className="px-8 lg:px-[200px]">
+          <div className="container mx-auto px-8 lg:pl-[150px]">
             <div
               className="text-left text-[160px] text-white leading-[100px]"
               style={{ fontFamily: '"Editor\'s Note", serif' }}
@@ -267,7 +272,10 @@ export default function Home() {
       </section>
 
       {/* Join the Revolution Section */}
-      <section className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-[120px]">
+      <section
+        id="community"
+        className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-[120px]"
+      >
         <div className="relative z-10 mx-auto container px-8 ">
           <div
             className="flex flex-col items-center justify-between gap-8 rounded-3xl bg-linear-to-r from-[#145FE3] to-[#7BE3FA] p-12 lg:flex-row lg:gap-12 lg:py-[120px] lg:px-[158px]"
