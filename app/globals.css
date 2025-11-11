@@ -1,9 +1,149 @@
 @import "tailwindcss";
 
+/* grift Font Family */
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-thinitalic.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-thin.otf") format("opentype");
+  font-weight: 50;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-thinitalic.otf")
+    format("opentype");
+  font-weight: 50;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-extralight.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-extralightitalic.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-lightitalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-mediumitalic.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-semibold.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-semibolditalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "grift";
+  src: url("/font/grift-geometric-typeface/grift-bolditalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Editor's Note Font Family */
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Regular.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Regular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,7 +151,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Italic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Italic.otf")
+    format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -19,7 +160,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Thin.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Thin.otf")
+    format("opentype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -27,7 +169,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-ThinItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-ThinItalic.otf")
+    format("opentype");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -35,7 +178,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Hairline.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Hairline.otf")
+    format("opentype");
   font-weight: 50;
   font-style: normal;
   font-display: swap;
@@ -43,7 +187,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-HairlineItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-HairlineItalic.otf")
+    format("opentype");
   font-weight: 50;
   font-style: italic;
   font-display: swap;
@@ -51,7 +196,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Extralight.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Extralight.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -59,7 +205,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-ExtralightItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-ExtralightItalic.otf")
+    format("opentype");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -67,7 +214,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Light.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Light.otf")
+    format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -75,7 +223,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-LightItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-LightItalic.otf")
+    format("opentype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -83,7 +232,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Medium.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -91,7 +241,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-MediumItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-MediumItalic.otf")
+    format("opentype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -99,7 +250,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Semibold.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Semibold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -107,7 +259,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-SemiboldItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-SemiboldItalic.otf")
+    format("opentype");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -115,7 +268,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-Bold.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-Bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -123,7 +277,8 @@
 
 @font-face {
   font-family: "Editor's Note";
-  src: url('/font/Editor\'s Note Family - Desktop/OTF/Editor\'sNote-BoldItalic.otf') format('opentype');
+  src: url("/font/Editor's Note Family - Desktop/OTF/Editor'sNote-BoldItalic.otf")
+    format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -131,80 +286,80 @@
 
 /* Satoshi Font Family */
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Regular.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Italic.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Light.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-LightItalic.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-LightItalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Medium.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-MediumItalic.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-MediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Bold.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-BoldItalic.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-BoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-Black.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/font/satoshi/Satoshi-BlackItalic.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/font/satoshi/Satoshi-BlackItalic.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -215,7 +370,6 @@
   --foreground: #171717;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -223,5 +377,5 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
 }

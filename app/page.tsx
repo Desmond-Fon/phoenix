@@ -2,16 +2,27 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="relative w-full overflow-hidden bg-[#000510]">
-      <img src="/headPattern.svg" className="absolute w-full object-contain" alt="" />
+      <img
+        src="/headPattern.svg"
+        className="absolute w-full object-contain"
+        alt=""
+      />
       <div>
         {/* Header */}
         <header className="relative z-10 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
-          <div className="flex items-center gap-3">
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <Image
               src="/logo.svg"
               alt="Phoenix Protocol"
@@ -19,8 +30,13 @@ export default function Home() {
               height={34}
               priority
             />
-          </div>
-          <nav className="hidden items-center gap-8 md:flex">
+          </motion.div>
+          <motion.nav
+            className="hidden items-center gap-8 md:flex"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             <a
               href="#home"
               className="font-sans text-white transition-opacity hover:opacity-80"
@@ -49,13 +65,16 @@ export default function Home() {
             >
               The Future
             </a>
-          </nav>
-          <button
+          </motion.nav>
+          <motion.button
             className="hidden md:block rounded-lg font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
             style={{ fontFamily: "Satoshi, sans-serif" }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             Buy $PHX
-          </button>
+          </motion.button>
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -177,19 +196,32 @@ export default function Home() {
             src="/heroMob.png"
           />
           {/* Main Headline */}
-          <h1
-            className="mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-normal leading-tight text-transparent lg:text-7xl xl:text-[105px]"
+          <motion.h1
+            className="mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-bold leading-tight text-transparent lg:text-7xl xl:text-[95px]"
             style={{
-              fontFamily: '"Editor\'s Note", serif',
+              fontFamily: '"grift", serif',
               textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
             }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
             Turning Market Fear Into Fuel
-          </h1>
+          </motion.h1>
           {/* Content Grid */}
-          <div className="mx-auto container lg:px-o relative flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8">
+          <motion.div
+            className="mx-auto container lg:px-o relative flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5, staggerChildren: 0.2 }}
+          >
             {/* Left Text Block */}
-            <div className=" w-full text-left lg:col-span-1">
+            <motion.div
+              className=" w-full text-left lg:col-span-1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
               <p
                 className="mt-[20px] lg:mt-0 mb-5 lg:mb-[38px] text-base lg:text-[26px] font-medium leading-[26px] lg:leading-[38px] text-white"
                 style={{ fontFamily: "Satoshi, sans-serif" }}
@@ -205,31 +237,38 @@ export default function Home() {
                 <br className="hidden lg:block" /> energy that makes{" "}
                 <br className="hidden lg:block" /> Phoenix stronger.
               </p>
-            </div>
+            </motion.div>
             <div />
             {/* Right Text Block */}
-            <div className="w-ful  hidden lg:block text-right lg:col-span-1">
+            <motion.div
+              className="w-ful  hidden lg:block text-right lg:col-span-1"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
               <p
                 className="text-lg lg:text-[26px] font-medium leading-[38px] text-white"
                 style={{ fontFamily: "Satoshi, sans-serif" }}
               >
-                Every sell, every
-                <br className="hidden lg:block" /> drop in confidence
-                <br className="hidden lg:block" /> fuels a regenerative
-                <br className="hidden lg:block" /> cycle that rewards
-                <br className="hidden lg:block" /> holders and rebuilds
-                <br className="hidden lg:block" /> the system from{" "}
+                Every sell, every drop
+                <br className="hidden lg:block" /> in confidence fuels a
+                <br className="hidden lg:block" /> regenerative cycle
+                <br className="hidden lg:block" /> that rewards holders
+                <br className="hidden lg:block" /> and rebuilds the
+                <br className="hidden lg:block" /> system from within.{" "}
                 <br className="hidden lg:block" />
-                within.
               </p>
-            </div>
-          </div>
-          <button
+            </motion.div>
+          </motion.div>
+          <motion.button
             className="rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
             style={{ fontFamily: "Satoshi, sans-serif" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
           >
             Buy $PHX
-          </button>
+          </motion.button>
         </section>
       </div>
 
@@ -257,47 +296,71 @@ export default function Home() {
         />
         <div className="container mx-auto relative z-10 px-8 py-20 lg:px-[170px] lg:py-32">
           {/* Title Box */}
-          <div className="mb-5 lg:mb-12 inline-block border bg-[#01164580] px-10 py-5 lg:px-20 lg:py-6">
+          <motion.div
+            className="mb-5 lg:mb-12 inline-block border bg-[#01164580] px-10 py-5 lg:px-20 lg:py-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <h2
-              className="text-[18px] lg:text-[30px] font-normal uppercase tracking-[10px] lg:tracking-[15px] text-white lg:mx-16"
+              className="text-[18px] lg:text-[30px] font-normal uppercase tracking-[10px] lg:tracking-[15px] text-white lg:mx-10"
               style={{ fontFamily: "Satoshi, sans-serif" }}
             >
               THE STORY
             </h2>
-          </div>
+          </motion.div>
 
           {/* Text Content */}
-          <div className="pb-32 space-y-[18px] lg:space-y-[58px] text-left">
-            <p
+          <motion.div
+            className="pb-32 space-y-[18px] lg:space-y-[58px] text-left"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, staggerChildren: 0.2 }}
+          >
+            <motion.p
               className="text-[14px] lg:text-[25px] leading-[26px] lg:leading-[40px] text-white"
               style={{ fontFamily: "Satoshi, sans-serif" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
               In every bear market, billions in value disappear as panic selling
               takes over. Most systems collapse under that pressure, But Phoenix
               was built to turn that fear into strength.
-            </p>
-            <p
-              className="text-[14px] lg:text-[25px] leading-[26px] lg:leading-[40px] text-white"
+            </motion.p>
+            <motion.p
+              className="text-[14px] lg:text-[25px] leading-[26px] lg:leading-[49px] text-white"
               style={{ fontFamily: "Satoshi, sans-serif" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               At its core, Phoenix Protocol introduces a self-healing economic
               design. When sell activity occurs, a portion of it is
               automatically redirected into a{" "}
-              <span className="text-[#00C8FF]">REBUILD RESERVE</span>, a
-              mechanism that rewards holders and fuels future growth. This
+              <span className="text-[#00C8FF] font-bold">REBUILD RESERVE</span>,
+              a mechanism that rewards holders and fuels future growth. This
               transforms downturns into opportunities, creating a regenerative
               loop that stabilizes the ecosystem over time.
-            </p>
-            <p
+            </motion.p>
+            <motion.p
               className="text-[14px] lg:text-[25px] leading-[26px] lg:leading-[40px] text-white"
               style={{ fontFamily: "Satoshi, sans-serif" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               Inspired by the legendary bird that rises renewed from its own
               ashes, Phoenix Protocol stands as a symbol of resilience in a
               volatile world — a protocol that doesn&apos;t just survive the
               storm, but grows stronger because of it.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Flame Graphic
           <div className="relative -bottom-20 left-0 right-0 flex items-end justify-center">
@@ -320,37 +383,66 @@ export default function Home() {
       >
         <div className="relative z-10 flex min-h-screen flex-col justify-between pt-20 lg:pt-32">
           {/* Top Section */}
-          <div className="container mx-auto px-8 lg:pl-[150px]">
-            <div
+          <motion.div
+            className="container mx-auto px-8 lg:pl-[150px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, staggerChildren: 0.2 }}
+          >
+            <motion.div
               className="text-left text-[100px] lg:text-[160px] text-white leading-[100px]"
-              style={{ fontFamily: '"Editor\'s Note", serif' }}
+              style={{ fontFamily: "'Editor's Note', serif" }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
             >
-              “
-            </div>
-            <p
+              &ldquo;
+            </motion.div>
+            <motion.p
               className="-mt-10 lg:-mt-16 mb-4 text-xl text-white lg:text-[40px] leading-[30px] lg:leading-[43px] px-2 lg:px-16"
-              style={{ fontFamily: '"Editor\'s Note", serif' }}
+              style={{ fontFamily: '"grift", serif' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              This coin could be the last coin getting added to the US Crypto{" "}
+              This coin could be the last coin getting added to the US{" "}
               <br className="hidden lg:block" />
-              Reserve
-            </p>
-            <p
+              Crypto Reserve
+            </motion.p>
+            <motion.p
               className="my-8 text-xl text-[#ABEDFF] lg:text-[40px] leading-[30px] lg:leading-[43px] px-2 lg:px-16"
-              style={{ fontFamily: '"Editor\'s Note", serif' }}
+              style={{ fontFamily: '"grift", serif' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Why? Because this coin solves a big problem in the crypto world.
-            </p>
-            <h2
-              className="text-4xl text-left text-[#FF2020] lg:text-[117px] px-2 lg:px-16"
-              style={{ fontFamily: '"Editor\'s Note", serif' }}
+              Why? Because this coin solves a big problem in the crypto{" "}
+              <br className="hidden lg:block" /> world.
+            </motion.p>
+            <motion.h2
+              className="text-4xl font-semibold text-left text-[#FF2020] lg:text-[117px] px-2 lg:px-16"
+              style={{ fontFamily: '"grift", serif' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               THE BEAR MARKET
-            </h2>
-          </div>
+            </motion.h2>
+          </motion.div>
 
           {/* Central Collage */}
-          <div className="relative flex lg:min-h-[300px] lg:-mt-16 items-center justify-center">
+          <motion.div
+            className="relative flex lg:min-h-[300px] lg:-mt-16 items-center justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8 }}
+          >
             <Image
               src="/marketBg.svg"
               alt="Market Background"
@@ -365,40 +457,62 @@ export default function Home() {
               height={1000}
               className="lg:hidden h-full w-full object-contain"
             />
-          </div>
+          </motion.div>
 
           {/* Bottom Section */}
-          <div className="lg:-mt-32  px-8 lg:px-[200px]">
-            <div
+          <motion.div
+            className="lg:-mt-32  px-8 lg:px-[200px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, staggerChildren: 0.2 }}
+          >
+            <motion.div
               className="text-left text-[100px] lg:text-[160px] text-white leading-[100px]"
-              style={{ fontFamily: '"Editor\'s Note", serif' }}
+              style={{ fontFamily: "'Editor's Note', serif" }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
             >
-              “
-            </div>{" "}
+              &ldquo;
+            </motion.div>{" "}
             <div className="lg:px-16">
-              <p
+              <motion.p
                 className="-mt-10 lg:-mt-16 px-2 lg:px-0 mb-[17px] text-xl bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text text-transparent font-medium lg:text-[40px] leading-[33px] lg:leading-[70px]"
                 style={{ fontFamily: "Satoshi, sans-serif" }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               >
                 After tracking what people believe could be one of Barron
                 Trump&apos;s wallets because it has transactions with his main
                 wallet, we can see that this wallet is accumulating a certain
                 amount of <span className="font-black">$PHX</span>.
-              </p>
-              <div
+              </motion.p>
+              <motion.div
                 className="text-right text-[100px] lg:text-[160px] text-white leading-[50px] lg:leading-[100px]"
-                style={{ fontFamily: '"Editor\'s Note", serif' }}
+                style={{ fontFamily: "'Editor's Note', serif" }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
               >
                 &rdquo;
-              </div>{" "}
-              <button
+              </motion.div>{" "}
+              <motion.button
                 className="rounded-lg bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-10 py-3 text-[30px] font-medium lg:font-semibold text-white transition-opacity hover:opacity-90"
                 style={{ fontFamily: "Satoshi, sans-serif" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
               >
                 Buy $PHX
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -408,24 +522,31 @@ export default function Home() {
         className="relative w-full bg-cover bg-center bg-no-repeat py-20 lg:py-[120px] overflow-hidden"
       >
         <div className="relative z-10 mx-auto container px-8">
-          <div
+          <motion.div
             className="relative flex flex-col items-center justify-between gap-[60px] rounded-3xl bg-linear-to-r from-[#145FE3] to-[#7BE3FA] p-12 lg:flex-row lg:gap-12 lg:py-[120px] lg:px-[158px] overflow-hidden"
-            // style={{
-            //   backgroundImage: "url('/joinBg.svg')",
-            // }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, staggerChildren: 0.2 }}
           >
             {/* Left Side - Text and Logo */}
             <img
               src="/joinBg.svg"
               alt="Phoenix Protocol Logo"
-              className="absolute top-0 left-0 lg:-left-[400px] w-full h-full z-0 object-cover"
+              className="absolute top-0 left-0 lg:left-[40px] z-0 object-cover"
             />
-            <div className="flex flex-1 items-center gap-6 relative z-10">
+            <motion.div
+              className="flex flex-1 items-center gap-6 relative z-10"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <div className="shrink-0">
                 <h1
-                  className="text-[62px] text-center lg:text-left font-normal leading-[57px] lg:leading-tight lg:text-[100px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text text-transparent"
+                  className="text-[62px] text-center lg:text-left font-semibold leading-[57px] lg:leading-[100px] lg:text-[100px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text text-transparent"
                   style={{
-                    fontFamily: '"Editor\'s Note", serif',
+                    fontFamily: '"grift", serif',
                     textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
                   }}
                 >
@@ -435,38 +556,73 @@ export default function Home() {
                 </h1>
               </div>
               <div className="shrink-0">
-                <img
+                <motion.img
                   src="/revolution.svg"
                   alt="Phoenix Protocol Logo"
-                  className="h-[65px] w-[65px] absolute top-[14%] lg:top-[30%] left-[76%] lg:left-[33%] lg:h-32 lg:w-32"
+                  className="h-[65px] w-[65px] absolute top-[14%] lg:top-[5%] left-[76%] lg:left-[53%] lg:h-32 lg:w-32"
+                  initial={{ opacity: 0, rotate: -180, scale: 0 }}
+                  whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Right Side - Social Buttons */}
-            <div className="flex gap-4 relative z-10">
+            <motion.div
+              className="flex gap-4 relative z-10"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               <a href="#" aria-label="X (Twitter)">
                 <img src="/x.svg" alt="X" />
               </a>
               <a href="#" aria-label="Telegram">
                 <img src="/tg.svg" alt="Telegram" />
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Footer Section */}
-      <section className="mx-auto flex justify-center flex-col items-center pt-[240px] relative pb-[50px]">
+      <motion.section
+        className="mx-auto flex justify-center flex-col items-center pt-[240px] relative pb-[50px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, staggerChildren: 0.2 }}
+      >
         <img
           src="/foot.svg"
           alt="Footer Background"
           className="absolute -top-[100px] lg:-top-[180px] left-[50%] translate-x-[-50%] z-0"
         />
-        <img src="/phx.svg" alt="Footer Background" />
+        <motion.img
+          src="/phx.svg"
+          alt="Footer Background"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        />
 
-        <div className="mx-auto bg-[#00C8FF] w-[90%] h-px lg:hidden my-10"></div>
-        <div className="px-16 container mx-auto">
+        <motion.div
+          className="mx-auto bg-[#00C8FF] w-[90%] lg:w-[69%] h-px my-10"
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 1, scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        ></motion.div>
+        <motion.div
+          className="px-16 container mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <p className="bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text text-transparent text-center text-xs lg:text-[20px] leading-[20px] lg:leading-[42px]">
             Phoenix Protocol is an evolving project within the crypto ecosystem.
             Participation or investment involves significant risk and should not{" "}
@@ -476,8 +632,8 @@ export default function Home() {
             <br className="hidden lg:block" />
             decisions.
           </p>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </div>
   );
 }
