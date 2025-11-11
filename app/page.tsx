@@ -183,7 +183,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="relative z-10  px-10 min-h-screen lg:pb-20"
+          className="relative z-10 px-10 min-h-[110vh] lg:min-h-screen lg:pb-20"
         >
           <video
             className="absolute bottom-0 left-0 lg:top-0 lg:left-0 w-full h-full z-0 lg:object-cover"
@@ -281,7 +281,7 @@ export default function Home() {
       {/* The Story Section */}
       <section
         id="story"
-        className="relative lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat -mt-72 lg:mt-0"
+        className="relative lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat -mt-64 lg:mt-0"
       >
         {/* Desktop Background */}
         <img
