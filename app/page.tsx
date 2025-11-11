@@ -183,24 +183,30 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="relative z-10  px-10 h-[95vh] lg:min-h-screen pb-20"
+          className="relative z-10  px-10 min-h-screen lg:pb-20"
         >
-          <img
-            className="hidden lg:block absolute top-0 left-0 w-full h-full z-0"
-            alt="Hero Background"
-            src="/hero.svg"
-          />
-          <img
+          <video
+            className="absolute bottom-0 left-0 lg:top-0 lg:left-0 w-full h-full z-0 lg:object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/phoenixVid.mp4" type="video/mp4" />
+          </video>
+          {/* <img
             className="lg:hidden absolute bottom-0 left-0 z-0"
             alt="Hero Background"
             src="/heroMob.png"
-          />
+          /> */}
           {/* Main Headline */}
           <motion.h1
-            className="mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-bold leading-tight text-transparent lg:text-7xl xl:text-[95px]"
+            className="relative z-10 mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-bold leading-tight text-transparent lg:text-7xl xl:text-[95px]"
             style={{
               fontFamily: '"grift", serif',
               textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
             }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -261,7 +267,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.button
-            className="rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
+            className="relative z-10 rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
             style={{ fontFamily: "Satoshi, sans-serif" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -275,7 +281,7 @@ export default function Home() {
       {/* The Story Section */}
       <section
         id="story"
-        className="relative lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat"
+        className="relative lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat -mt-72 lg:mt-0"
       >
         {/* Desktop Background */}
         <img
