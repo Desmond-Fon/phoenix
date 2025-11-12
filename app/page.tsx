@@ -11,12 +11,12 @@ export default function Home() {
     <div className="relative w-full overflow-hidden bg-[#000510]">
       <img
         src="/headPattern.svg"
-        className="absolute w-full object-contain"
+        className="absolute w-full object-contain z-20"
         alt=""
       />
-      <div>
+      <div className="relative z-30">
         {/* Header */}
-        <header className="relative z-10 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
+        <header className="relative z-30 flex items-center justify-between px-8 py-6 lg:px-[200px] lg:pt-[140px]">
           <motion.div
             className="flex items-center gap-3"
             initial={{ opacity: 0, y: -20 }}
@@ -183,25 +183,25 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="relative z-10 px-10 min-h-[110vh] lg:min-h-screen lg:pb-20"
+          className="relative z-10 px-10 min-h-[90vh] lg:min-h-screen lg:pb-20"
         >
           <video
-            className="absolute bottom-0 left-0 lg:top-0 lg:left-0 w-full h-full z-0 lg:object-cover"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto lg:h-[1200px] h-[500px] z-1 object-cover"
             autoPlay
             loop
             muted
             playsInline
           >
-            <source src="/phoenixVid.mp4" type="video/mp4" />
+            <source src="/phoenixAnimation.mp4" type="video/mp4" />
           </video>
-          {/* <img
-            className="lg:hidden absolute bottom-0 left-0 z-0"
+          <img
+            className="w-full absolute bottom-0 left-0 z-1"
             alt="Hero Background"
-            src="/heroMob.png"
-          /> */}
+            src="/blur.svg"
+          />
           {/* Main Headline */}
           <motion.h1
-            className="relative z-10 mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-bold leading-tight text-transparent lg:text-7xl xl:text-[95px]"
+            className="relative z-20 mb-1 lg:mt-[130px] bg-linear-to-t from-[#ABEDFF] to-[#FFFFFF] bg-clip-text lg:text-center text-5xl font-bold leading-tight text-transparent lg:text-7xl xl:text-[95px]"
             style={{
               fontFamily: '"grift", serif',
               textShadow: "0 0 40px rgba(0, 220, 233, 0.5)",
@@ -216,7 +216,7 @@ export default function Home() {
           </motion.h1>
           {/* Content Grid */}
           <motion.div
-            className="mx-auto container lg:px-o relative flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8"
+            className="mx-auto container lg:px-o relative z-20 flex w-full max-w-7xl flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5, staggerChildren: 0.2 }}
@@ -267,7 +267,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.button
-            className="relative z-10 rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
+            className="relative z-20 rounded-lg lg:hidden font-medium bg-linear-to-r from-[#1558FF] to-[#00DCE9] px-6 py-2.5 text-white transition-opacity hover:opacity-90"
             style={{ fontFamily: "Satoshi, sans-serif" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -281,7 +281,7 @@ export default function Home() {
       {/* The Story Section */}
       <section
         id="story"
-        className="relative lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat -mt-64 lg:mt-0"
+        className="relative z-50 lg:min-h-[120vh] w-full lg:px-16 bg-cover bg-center bg-no-repeat"
       >
         {/* Desktop Background */}
         <img
@@ -565,7 +565,7 @@ export default function Home() {
                 <motion.img
                   src="/revolution.svg"
                   alt="Phoenix Protocol Logo"
-                  className="h-[65px] w-[65px] absolute top-[14%] lg:top-[5%] left-[76%] lg:left-[53%] lg:h-32 lg:w-32"
+                  className="h-[65px] w-[65px] absolute top-[7%] lg:top-[5%] left-[80%] lg:left-[53%] lg:h-32 lg:w-32"
                   initial={{ opacity: 0, rotate: -180, scale: 0 }}
                   whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
                   viewport={{ once: true }}
@@ -595,17 +595,21 @@ export default function Home() {
 
       {/* Footer Section */}
       <motion.section
-        className="mx-auto flex justify-center flex-col items-center pt-[240px] relative pb-[50px]"
+        className="mx-auto flex justify-center flex-col items-center pt-[170px] lg:pt-[240px] relative pb-[50px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, staggerChildren: 0.2 }}
       >
-        <img
-          src="/foot.svg"
-          alt="Footer Background"
-          className="absolute -top-[100px] lg:-top-[180px] left-[50%] translate-x-[-50%] z-0"
+        <video
+          src="/phx.mp4"
+          className="absolute -top-[100px] lg:-top-[180px] left-[50%] translate-x-[-50%] z-0 w-auto h-[70%]"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
+
         <motion.img
           src="/phx.svg"
           alt="Footer Background"
@@ -613,6 +617,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="relative z-10"
         />
 
         <motion.div
